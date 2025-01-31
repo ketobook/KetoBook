@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KetoBook</title>
     <style>
         body {
@@ -9,37 +10,55 @@
             margin: 0;
             padding: 0;
             color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         header {
             background-color: #f5f5f5;
-            padding: 40px;
+            padding: 40px 20px;
             text-align: center;
         }
         header h1 {
             margin-bottom: 10px;
         }
         header p {
-            margin-bottom: 0;
+            margin-bottom: 10px;
         }
         .hero-image {
             width: 100%;
-            height: 400px;
-            background-color: #ddd;
+            max-height: 500px;
+            overflow: hidden;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
         }
         .project-overview {
             display: flex;
-            padding: 40px;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 30px;
         }
         .project-image {
-            flex: 0 0 300px;
-            background-color: #ddd;
-            margin-right: 40px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 400px;
+        }
+        .project-description {
+            flex: 2;
+            min-width: 250px;
         }
         .features {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            padding: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
         }
         .feature {
             background-color: #f5f5f5;
@@ -51,7 +70,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            padding: 40px;
+            padding: 40px 20px;
         }
         .tech-stack span {
             background-color: #e9ecef;
@@ -60,7 +79,7 @@
             font-size: 14px;
         }
         section {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
         .language-toggle {
             position: fixed;
@@ -84,6 +103,19 @@
         .lang-content.active {
             display: block;
         }
+        @media (max-width: 768px) {
+            .project-overview {
+                flex-direction: column;
+            }
+            .features {
+                grid-template-columns: 1fr;
+            }
+            .language-toggle {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -92,103 +124,105 @@
         <a href="#" onclick="switchLanguage('pl')" class="lang-switch pl active">PL</a>
     </div>
 
-    <div id="pl-content" class="lang-content active pl">
-        <header>
-            <h1>KetoBook</h1>
-            <p>Autorska aplikacja do zarządzania przepisami diety ketogenicznej i niskowęglowodanowej.</p>
-            <p><em>Uwaga: Ze względu na komercyjny charakter projektu, kod źródłowy jest prywatny. Fragmenty kodu dostępne na życzenie podczas procesu rekrutacji.</em></p>
-        </header>
+    <div class="container">
+        <div id="pl-content" class="lang-content active pl">
+            <header>
+                <h1>KetoBook</h1>
+                <p>Autorska aplikacja do zarządzania przepisami diety ketogenicznej i niskowęglowodanowej.</p>
+                <p><em>Uwaga: Ze względu na komercyjny charakter projektu, kod źródłowy jest prywatny. Fragmenty kodu dostępne na życzenie podczas procesu rekrutacji.</em></p>
+            </header>
 
-        <section>
-            <div class="hero-image">
-                <!-- Umieść tutaj grafikę -->
-            </div>
-        </section>
-
-        <section>
-            <div class="project-overview">
-                <div class="project-image">
-                    <!-- Umieść tutaj pionowy gif -->
+            <section>
+                <div class="hero-image">
+                    <img src="ketobook-screens.png" alt="KetoBook Screen">
                 </div>
-                <div class="project-description">
-                    <p>KetoBook to kompleksowe rozwiązanie dla osób na diecie ketogenicznej i niskowęglowodanowej. Aplikacja powstała z myślą o uporządkowaniu i ułatwieniu dostępu do sprawdzonych przepisów z rozpisanym macro i poradami, z możliwością personalizacji oraz tworzenia i zarządzania własnymi przepisami.</p>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <h2>Kluczowe funkcjonalności</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>📱 Zarządzanie Przepisami</h3>
-                    <p>Dodawanie, edycja i usuwanie własnych przepisów z intuicyjnym interfejsem</p>
+            <section>
+                <div class="project-overview">
+                    <div class="project-image">
+                        <img src="ketobook-gif.gif" alt="KetoBook Demo">
+                    </div>
+                    <div class="project-description">
+                        <p>KetoBook to kompleksowe rozwiązanie dla osób na diecie ketogenicznej i niskowęglowodanowej. Aplikacja powstała z myślą o uporządkowaniu i ułatwieniu dostępu do sprawdzonych przepisów z rozpisanym macro i poradami, z możliwością personalizacji oraz tworzenia i zarządzania własnymi przepisami.</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <h3>🔐 Autentykacja Użytkowników</h3>
-                    <p>Bezpieczne logowanie przez Firebase Auth i Google Sign-In</p>
+            </section>
+
+            <section>
+                <h2>Kluczowe funkcjonalności</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>📱 Zarządzanie Przepisami</h3>
+                        <p>Dodawanie, edycja i usuwanie własnych przepisów z intuicyjnym interfejsem</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🔐 Autentykacja Użytkowników</h3>
+                        <p>Bezpieczne logowanie przez Firebase Auth i Google Sign-In</p>
+                    </div>
+                    <div class="feature">
+                        <h3>⭐ Listy Ulubionych</h3>
+                        <p>Personalizowana lista ulubionych przepisów z kategoryzacją</p>
+                    </div>
+                    <div class="feature">
+                        <h3>💎 Model Freemium</h3>
+                        <p>Darmowa wersja z podstawowymi funkcjami + wersja premium z rozszerzonymi możliwościami</p>
+                    </div>
                 </div>
-                <div class="feature">
-                    <h3>⭐ Listy Ulubionych</h3>
-                    <p>Personalizowana lista ulubionych przepisów z kategoryzacją</p>
+            </section>
+
+            <section>
+                <h2>Technologie</h2>
+                <div class="tech-stack">
+                    <span>Flutter & Dart</span>
+                    <span>Firebase Cloud</span>
+                    <span>Firebase Auth</span>
+                    <span>Google Sign-In</span>
+                    <span>BLoC/Cubit</span>
+                    <span>Injectable</span>
+                    <span>Unit Tests</span>
+                    <span>Git</span>
                 </div>
-                <div class="feature">
-                    <h3>💎 Model Freemium</h3>
-                    <p>Darmowa wersja z podstawowymi funkcjami + wersja premium z rozszerzonymi możliwościami</p>
+            </section>
+
+            <section>
+                <h2>Status projektu</h2>
+                <p>Obecnie finalizuję pierwszą publiczną wersję aplikacji, która będzie oferować:</p>
+                <ul>
+                    <li>Ograniczony dostęp do bazy przepisów</li>
+                    <li>Dodawanie własnych przepisów z określonym limitem</li>
+                    <li>Wszystkie funkcje zarządzania przepisami</li>
+                </ul>
+                <p>Planuję wprowadzić wersję premium z rozszerzonymi funkcjonalnościami.</p>
+            </section>
+
+            <section>
+                <h2>Kontakt</h2>
+                <p>Zainteresowanych szczegółami technicznymi projektu zapraszam do kontaktu: esteraszamli@gmail.com.</p>
+                <p>Na potrzeby rekrutacji mogę udostępnić wybrane fragmenty kodu.</p>
+            </section>
+        </div>
+
+        <div id="en-content" class="lang-content en" style="display:none;">
+            <header>
+                <h1>KetoBook</h1>
+                <p>Original mobile app for managing ketogenic and low-carb recipes.</p>
+                <p><em>Note: Due to the commercial nature of the project, source code is private. Code fragments available upon request during the recruitment process.</em></p>
+            </header>
+
+            <section>
+                <div class="project-overview">
+                    <div class="project-image">
+                        <img src="ketobook-gif.gif" alt="KetoBook Demo">
+                    </div>
+                    <div class="project-description">
+                        <p>KetoBook is a comprehensive solution for people on a ketogenic and low-carb diet. The app was created to organize and facilitate access to proven recipes with macros and tips, with the ability to personalize and create and manage your own recipes.</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section>
-            <h2>Technologie</h2>
-            <div class="tech-stack">
-                <span>Flutter & Dart</span>
-                <span>Firebase Cloud</span>
-                <span>Firebase Auth</span>
-                <span>Google Sign-In</span>
-                <span>BLoC/Cubit</span>
-                <span>Injectable</span>
-                <span>Unit Tests</span>
-                <span>Git</span>
-            </div>
-        </section>
-
-        <section>
-            <h2>Status projektu</h2>
-            <p>Obecnie finalizuję pierwszą publiczną wersję aplikacji, która będzie oferować:</p>
-            <ul>
-                <li>Ograniczony dostęp do bazy przepisów</li>
-                <li>Dodawanie własnych przepisów z określonym limitem</li>
-                <li>Wszystkie funkcje zarządzania przepisami</li>
-            </ul>
-            <p>Planuję wprowadzić wersję premium z rozszerzonymi funkcjonalnościami.</p>
-        </section>
-
-        <section>
-            <h2>Kontakt</h2>
-            <p>Zainteresowanych szczegółami technicznymi projektu zapraszam do kontaktu: esteraszamli@gmail.com.</p>
-            <p>Na potrzeby rekrutacji mogę udostępnić wybrane fragmenty kodu.</p>
-        </section>
-    </div>
-
-    <div id="en-content" class="lang-content en" style="display:none;">
-        <header>
-            <h1>KetoBook</h1>
-            <p>Original mobile app for managing ketogenic and low-carb recipes.</p>
-            <p><em>Note: Due to the commercial nature of the project, source code is private. Code fragments available upon request during the recruitment process.</em></p>
-        </header>
-
-        <section>
-            <div class="project-overview">
-                <div class="project-image">
-                    <!-- Vertical gif -->
-                </div>
-                <div class="project-description">
-                    <p>KetoBook is a comprehensive solution for people on a ketogenic and low-carb diet. The app was created to organize and facilitate access to proven recipes with macros and tips, with the ability to personalize and create and manage your own recipes.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Other sections in English -->
+            <!-- Other sections in English -->
+        </div>
     </div>
 
     <script>
