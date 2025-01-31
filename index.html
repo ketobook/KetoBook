@@ -13,11 +13,11 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: #333;
             line-height: 1.6;
-            background-color: #f9f9f9;
+            background-color: #e6f3e6;
         }
         .container {
-            width: 100%;
-            max-width: 800px;
+            width: 66%;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px 80px 20px;
             box-sizing: border-box;
@@ -30,7 +30,7 @@
         }
         .hero-image {
             width: 100%;
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
         }
         .hero-image img {
@@ -61,7 +61,7 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             padding: 40px 0;
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
         }
         .feature {
@@ -75,7 +75,7 @@
             justify-content: center;
             gap: 10px;
             padding: 40px 0;
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
         }
         .tech-stack span {
@@ -107,12 +107,14 @@
             display: block;
         }
         section {
-            max-width: 800px;
+            max-width: 100%;
             margin: 0 auto;
             padding: 20px;
         }
-
         @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
             .project-overview {
                 flex-direction: column;
                 align-items: center;
@@ -216,6 +218,12 @@
             </header>
 
             <section>
+                <div class="hero-image">
+                    <img src="ketobook-screens.png" alt="KetoBook Screen">
+                </div>
+            </section>
+
+            <section>
                 <div class="project-overview">
                     <div class="project-image">
                         <img src="ketobook-gif.gif" alt="KetoBook Demo">
@@ -226,7 +234,58 @@
                 </div>
             </section>
 
-            <!-- Pozostałe sekcje w języku angielskim analogicznie -->
+            <section>
+                <h2>Key Functionalities</h2>
+                <div class="features">
+                    <div class="feature">
+                        <h3>📱 Recipe Management</h3>
+                        <p>Adding, editing, and deleting custom recipes with an intuitive interface</p>
+                    </div>
+                    <div class="feature">
+                        <h3>🔐 User Authentication</h3>
+                        <p>Secure login through Firebase Auth and Google Sign-In</p>
+                    </div>
+                    <div class="feature">
+                        <h3>⭐ Favorites List</h3>
+                        <p>Personalized list of favorite recipes with categorization</p>
+                    </div>
+                    <div class="feature">
+                        <h3>💎 Freemium Model</h3>
+                        <p>Free version with basic features + premium version with extended capabilities</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Technologies</h2>
+                <div class="tech-stack">
+                    <span>Flutter & Dart</span>
+                    <span>Firebase Cloud</span>
+                    <span>Firebase Auth</span>
+                    <span>Google Sign-In</span>
+                    <span>BLoC/Cubit</span>
+                    <span>Injectable</span>
+                    <span>Unit Tests</span>
+                    <span>Git</span>
+                </div>
+            </section>
+
+            <section>
+                <h2>Project Status</h2>
+                <p>Currently finalizing the first public version of the app, which will offer:</p>
+                <ul>
+                    <li>Limited access to recipe database</li>
+                    <li>Adding custom recipes with a specific limit</li>
+                    <li>All recipe management features</li>
+                </ul>
+                <p>Planning to introduce a premium version with extended functionalities.</p>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>Interested in technical details of the project can contact: esteraszamli@gmail.com.</p>
+                <p>Code fragments can be made available for recruitment purposes.</p>
+            </section>
         </div>
     </div>
 
