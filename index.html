@@ -13,52 +13,46 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 100%;
+            max-width: 100%;
+            padding: 0 40px;
+            box-sizing: border-box;
         }
         header {
             background-color: #f5f5f5;
             padding: 40px 20px;
             text-align: center;
         }
-        header h1 {
-            margin-bottom: 10px;
-        }
-        header p {
-            margin-bottom: 10px;
-        }
         .hero-image {
             width: 100%;
-            max-height: 500px;
-            overflow: hidden;
         }
         .hero-image img {
             width: 100%;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
         }
         .project-overview {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            padding: 40px 20px;
             gap: 30px;
+            padding: 40px 0;
         }
         .project-image {
-            flex: 1;
-            min-width: 250px;
-            max-width: 400px;
+            flex: 0 0 300px;
+            max-width: 300px;
         }
-        .project-description {
-            flex: 2;
-            min-width: 250px;
+        .project-image img {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            object-fit: contain;
         }
         .features {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            padding: 40px 20px;
+            padding: 40px 0;
         }
         .feature {
             background-color: #f5f5f5;
@@ -70,16 +64,13 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 10px;
-            padding: 40px 20px;
+            padding: 40px 0;
         }
         .tech-stack span {
             background-color: #e9ecef;
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 14px;
-        }
-        section {
-            margin-bottom: 20px;
         }
         .language-toggle {
             position: fixed;
@@ -102,19 +93,6 @@
         }
         .lang-content.active {
             display: block;
-        }
-        @media (max-width: 768px) {
-            .project-overview {
-                flex-direction: column;
-            }
-            .features {
-                grid-template-columns: 1fr;
-            }
-            .language-toggle {
-                position: static;
-                justify-content: center;
-                margin-bottom: 20px;
-            }
         }
     </style>
 </head>
@@ -221,7 +199,7 @@
                 </div>
             </section>
 
-            <!-- Other sections in English -->
+            <!-- Pozostałe sekcje w języku angielskim analogicznie -->
         </div>
     </div>
 
