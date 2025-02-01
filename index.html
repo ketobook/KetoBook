@@ -14,7 +14,7 @@
             font-size: 18px;
             color: #333;
             line-height: 1.6;
-            background-color: #e6f3e6;
+            background-color: #e8f0e6;
         }
         .container {
             width: 66%;
@@ -24,9 +24,8 @@
             box-sizing: border-box;
         }
        header {
-    background-color: #e6f3e6;
+    background-color: #e8f0e6;
     padding: 40px 0;
-    text-align: center;
     width: 66%;
     max-width: 1200px;
     margin: 0 auto;
@@ -71,7 +70,7 @@
             margin: 0 auto;
         }
         .feature {
-            background-color: #e6f3e6;
+            background-color: #e8f0e6;
             padding: 20px;
             border-radius: 8px;
         }
@@ -117,16 +116,52 @@
             margin: 0 auto;
             padding: 20px;
         }
-        @media (max-width: 768px) {
+                @media (max-width: 768px) {
             .container {
-                width: 90%;
+                width: 100%;
+                padding: 0 15px 40px 15px;
+            }
+            header {
+                width: 100%;
+                padding: 20px 15px;
+            }
+            .hero-image {
+                margin: -20px -15px 0;
+                width: calc(100% + 30px);
+            }
+            section {
+                padding: 10px 0;
             }
             .project-overview {
+                gap: 15px;
+                padding: 20px 0;
                 flex-direction: column;
                 align-items: center;
             }
             .project-image {
                 max-width: 100%;
+            }
+            .features {
+                gap: 10px;
+                padding: 20px 0;
+            }
+            .tech-stack {
+                padding: 20px 0;
+            }
+            section + section {
+                margin-top: 20px;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+            .feature {
+                padding: 15px;
+            }
+            .tech-stack span {
+                padding: 6px 12px;
+                font-size: 14px;
             }
         }
     </style>
@@ -207,7 +242,7 @@
                     <li>Dodawanie własnych przepisów z określonym limitem</li>
                     <li>Wszystkie funkcje zarządzania przepisami</li>
                 </ul>
-                <p>Planuję wprowadzić wersję premium z rozszerzonymi funkcjonalnościami.</p>
+                <p>Na dalszym etapie planuję wprowadzić wersję premium z rozszerzonymi funkcjonalnościami jak i zupełnie nowymi.</p>
             </section>
 
             <section>
@@ -285,12 +320,12 @@
                     <li>Adding custom recipes with a specific limit</li>
                     <li>All recipe management features</li>
                 </ul>
-                <p>Planning to introduce a premium version with extended functionalities.</p>
+                <p>At a later stage, I plan to introduce a premium version with enhanced features as well as completely new ones.</p>
             </section>
 
             <section>
                 <h2>Contact</h2>
-                <p>Interested in technical details of the project can contact: esteraszamli@gmail.com.</p>
+                <p>For technical details about the project, please contact me at: esteraszamli@gmail.com.</p>
             </section>
         </div>
     </div>
