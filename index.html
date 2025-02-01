@@ -116,7 +116,7 @@
             margin: 0 auto;
             padding: 20px;
         }
-                @media (max-width: 768px) {
+        @media (max-width: 768px) {
             .container {
                 width: 100%;
                 padding: 0 15px 40px 15px;
@@ -126,8 +126,8 @@
                 padding: 20px 15px;
             }
             .hero-image {
-                margin: -20px -15px 0;
-                width: calc(100% + 30px);
+                margin: 0;
+                width: 100%;
             }
             section {
                 padding: 10px 0;
@@ -152,6 +152,7 @@
                 margin-top: 20px;
             }
         }
+
         @media (max-width: 480px) {
             body {
                 font-size: 16px;
@@ -162,6 +163,11 @@
             .tech-stack span {
                 padding: 6px 12px;
                 font-size: 14px;
+            }
+            .language-toggle {
+                top: 5px;
+                right: 5px;
+                padding: 5px;
             }
         }
     </style>
